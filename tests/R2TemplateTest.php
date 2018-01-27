@@ -5,6 +5,14 @@ use PHPUnit\Framework\TestCase;
 use R2Template\R2Template;
 
 class R2TemplateTest extends TestCase{
+	public function testSetAndGet(){
+		$Template = new R2Template();
+		$value = "string";
+		$Template->set("var1", $value);
+		$this->assertSame($value, $Template->get("var1"));
+		$this->assertNull($Template->get("var2"));
+	}
+
 	public function testDisplayWithConstructor(){
 		$path = __DIR__."/templates";
 		$text = "Silence is golden.";

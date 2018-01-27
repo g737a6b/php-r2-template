@@ -48,6 +48,14 @@ class R2Template{
 		$this->vars[$name] = $value;
 	}
 
+	/**
+	 * @param string $name
+	 * @return mixed
+	 */
+	public function get(string $name){
+		return ( isset($this->vars[$name]) ) ? $this->vars[$name] : null;
+	}
+
 	public function clearVars(){
 		$this->vars = [];
 	}
