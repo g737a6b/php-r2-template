@@ -54,4 +54,13 @@ class R2TemplateTest extends TestCase{
 		$Template = new R2Template($path);
 		$this->assertSame($text, $Template->getContents("echo_var.php", ["var" => $text]));
 	}
+
+	public function testClearVars(){
+		$Template = new R2Template();
+		$value = "string";
+		$Template->set("var", $value);
+		$this->assertSame($value, $Template->get("var"));
+		$Template->clearVars();
+		$this->assertNull($Template->get("var"));
+	}
 }
