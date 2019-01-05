@@ -2,7 +2,7 @@
 
 PHP library to generate HTML document.
 
-## 1. Examples of use
+## Examples of use
 
 ```php
 $R2Template = new R2Template\R2Template("./templates");
@@ -11,9 +11,9 @@ $R2Template->set("var2", "bar");
 $R2Template->display("echo_vars.php");// foo bar
 ```
 
-## 2. Installation
+## Installation
 
-### 2-1. Composer
+### Composer
 
 Add a dependency to your project's `composer.json` file.
 
@@ -25,8 +25,16 @@ Add a dependency to your project's `composer.json` file.
 }
 ```
 
-## 3. License
+## Development
+
+### Run tests
+
+```sh
+docker run -it --rm -v $(pwd):/app composer:1.8 run-script tests
+```
+
+## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2017 [Hiroyuki Suzuki](https://mofg.net)
+Copyright (c) 2019 [Hiroyuki Suzuki](https://mofg.net)

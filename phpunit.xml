@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
-	<testsuites>
-		<testsuite name="R2Template Test Suite">
-			<file>./tests/R2TemplateTest.php</file>
-		</testsuite>
-	</testsuites>
-</phpunit>
