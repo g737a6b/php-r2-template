@@ -14,8 +14,8 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./composer.lock') }}
       - name: Install composer packages
         run: docker run --rm -v $(pwd):/app composer:2.0 install
-   tests:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Run PHPUnit tests
-         run: docker run --rm -v $(pwd):/app composer:2.0 run-script tests
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run PHPUnit tests
+        run: docker run --rm -v $(pwd):/app composer:2.0 run-script tests
