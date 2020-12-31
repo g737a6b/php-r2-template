@@ -1,4 +1,4 @@
-# R2Template [![CircleCI](https://circleci.com/gh/g737a6b/php-r2-template.svg?style=svg)](https://circleci.com/gh/g737a6b/php-r2-template)
+# R2Template ![main](https://github.com/g737a6b/php-r2-template/workflows/main/badge.svg)
 
 PHP library to generate HTML document.
 
