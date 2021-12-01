@@ -1,6 +1,6 @@
 {
 	"name": "g737a6b/php-r2-template",
-	"description": "PHP library to generate HTML document.",
+	"description": "PHP template library.",
 	"keywords": ["template"],
 	"license": "MIT",
 	"authors": [
