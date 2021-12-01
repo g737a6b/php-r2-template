@@ -1,6 +1,6 @@
 # R2Template ![main](https://github.com/g737a6b/php-r2-template/workflows/main/badge.svg)
 
-PHP library to generate HTML document.
+PHP template library.
 
 ## Examples of use
 
