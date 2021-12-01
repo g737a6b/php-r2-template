@@ -21,21 +21,14 @@ class R2Template{
 	protected $file = "";
 
 	/**
-	 * @var string
-	 */
-	protected $path = "";
-
-	/**
 	 * @param string $path (optional)
 	 */
-	public function __construct(string $path = null){
-		if( isset($path) ) $this->path = $path;
-	}
+	public function __construct(protected string $path = ""){}
 
 	/**
 	 * @param string $path
 	 */
-	public function setPath(string $path){
+	public function setPath(string $path) : void{
 		$this->path = $path;
 	}
 
@@ -43,7 +36,7 @@ class R2Template{
 	 * @param string $name
 	 * @param mixed $value
 	 */
-	public function set(string $name, $value){
+	public function set(string $name, $value) : void{
 		$this->vars[$name] = $value;
 	}
 
@@ -55,7 +48,7 @@ class R2Template{
 		return ( isset($this->vars[$name]) ) ? $this->vars[$name] : null;
 	}
 
-	public function clearVars(){
+	public function clearVars() : void{
 		$this->vars = [];
 	}
 
@@ -65,7 +58,7 @@ class R2Template{
 	 * @param bool $usePath (optional)
 	 * @return bool
 	 */
-	public function display(string $file, array $vars = [], bool $usePath = true){
+	public function display(string $file, array $vars = [], bool $usePath = true) : bool{
 		$this->file = ( $usePath ) ? rtrim($this->path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.$file : $file;
 		if( !file_exists($this->file) ){
 			trigger_error("Template ({$this->file}) was not found.", E_USER_WARNING);
@@ -89,7 +82,7 @@ class R2Template{
 	 * @param bool $usePath (optional)
 	 * @return string
 	 */
-	public function getContents(string $file, array $vars = [], bool $usePath = true){
+	public function getContents(string $file, array $vars = [], bool $usePath = true) : string{
 		ob_start();
 		$this->display($file, $vars, $usePath);
 		$result = ob_get_contents();
@@ -100,21 +93,21 @@ class R2Template{
 	/**
 	 * @deprecated
 	 */
-	public function set_dir(string $path){
-		return $this->setPath($path);
+	public function set_dir(string $path) : void{
+		$this->setPath($path);
 	}
 
 	/**
 	 * @deprecated
 	 */
-	public function clear_vars(){
-		return $this->clearVars();
+	public function clear_vars() : void{
+		$this->clearVars();
 	}
 
 	/**
 	 * @deprecated
 	 */
-	public function get_contents(string $file, array $vars = [], bool $usePath = true){
+	public function get_contents(string $file, array $vars = [], bool $usePath = true) : string{
 		return $this->getContents($file, $vars, $usePath);
 	}
 }
