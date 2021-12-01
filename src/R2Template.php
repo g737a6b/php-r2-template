@@ -21,16 +21,9 @@ class R2Template{
 	protected $file = "";
 
 	/**
-	 * @var string
-	 */
-	protected $path = "";
-
-	/**
 	 * @param string $path (optional)
 	 */
-	public function __construct(string $path = null){
-		if( isset($path) ) $this->path = $path;
-	}
+	public function __construct(protected string $path = ""){}
 
 	/**
 	 * @param string $path
