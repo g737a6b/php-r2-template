@@ -1,6 +1,6 @@
 {
 	"name": "g737a6b/php-r2-template",
-	"description": "PHP library to generate HTML document.",
+	"description": "PHP template library.",
 	"keywords": ["template"],
 	"license": "MIT",
 	"authors": [
@@ -12,6 +12,9 @@
 	"support": {
 		"source": "https://github.com/g737a6b/php-r2-template",
 		"issues": "https://github.com/g737a6b/php-r2-template/issues"
+	},
+	"require": {
+		"php": ">=7.1"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^9.5"
