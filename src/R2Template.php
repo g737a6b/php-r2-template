@@ -16,6 +16,11 @@ class R2Template{
 	protected $vars = [];
 
 	/**
+	 * @var array
+	 */
+	protected $_vars = [];
+
+	/**
 	 * @var string
 	 */
 	protected $file = "";
