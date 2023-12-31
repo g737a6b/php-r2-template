@@ -23,8 +23,5 @@
 		"psr-4": {
 			"R2Template\\": "src/"
 		}
-	},
-	"scripts": {
-		"tests": "phpunit tests/"
 	}
 }
