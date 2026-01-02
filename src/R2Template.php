@@ -80,10 +80,10 @@ class R2Template
     public function display(string $file, array $vars = [], bool $usePath = true): bool
     {
         $this->file = ($usePath) ? rtrim($this->path, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR.$file : $file;
-        if(!file_exists($this->file)) {
+        if (!file_exists($this->file)) {
             trigger_error("Template ({$this->file}) was not found.", E_USER_WARNING);
             return false;
-        } elseif(!is_readable($this->file)) {
+        } elseif (!is_readable($this->file)) {
             trigger_error("Template ({$this->file}) is not readable.", E_USER_WARNING);
             return false;
         }
