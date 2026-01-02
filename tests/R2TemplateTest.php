@@ -80,7 +80,7 @@ class R2TemplateTest extends TestCase
         $Template = new R2Template($path);
 
         $warningTriggered = false;
-        set_error_handler(function($errno, $errstr) use (&$warningTriggered) {
+        set_error_handler(function ($errno, $errstr) use (&$warningTriggered) {
             if ($errno === E_USER_WARNING && mb_strpos($errstr, 'Template') !== false) {
                 $warningTriggered = true;
             }
